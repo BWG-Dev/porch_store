@@ -1,0 +1,15 @@
+.gform_wrapper {
+	// submit button
+	.gform_button[type="submit"] {
+		@include btn-green;
+		font-size: 13px !important;
+	}
+
+	// select files
+	input.button.gform_button_select_files {
+		@include btn-white;
+		font-size: 13px !important;
+		line-height: 40px !important;
+		border: 1px solid #ccc;
+	}
+}

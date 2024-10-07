@@ -1,0 +1,174 @@
+/*
+Theme Name: The Porch Company 2019
+Author: Thomas G. Bennett, Inc.
+Author URI: https://thomasgbennett.com
+Description: Custom theme for The Porch Company
+Version: 1.0
+*/
+
+/**
+ * ----- Put Custom CSS overrides below -----
+ */
+
+  header .site-message {margin: 0;
+    padding: 20px;
+    background: rgba(44,35,18,.8);
+    color: #fff;
+	text-align:center;
+	}
+	
+ header, .header-inner{max-width: 100% !important; z-index: 99;}
+.header-banner-wrap {padding: 0 !important; background-position:50% 30% !important }
+.header-banner-wrap .header-inner h1.title { color: #004646;font-weight:bold; }
+#hp-hero .content{position: absolute !important; top: auto !important; bottom: 20%; margin:0 auto; text-align:center;}
+#hp-hero{position: relative; text-align: center;min-height:570px!important;}
+#jig1 .jig-loadMoreButton{max-width: 250px !important;}
+.bottom-links div .wpb_wrapper p a{ color: #fff !important; font-size: 16px;  padding: 8px 10px 12px;  background: #004646;}
+.page-template.page-template-store-landing-page .bottom-links .wpb_text_column>.wpb_wrapper p a:hover{background: #006060!important; color:#fff !important;}
+.page-template-store-landing-page .bottom-links .wpb_text_column{margin-top: 20px;}
+.page-template-store-landing-page #store-landing-hero .content { position: absolute; margin-top: 220px; padding-top: 0; left: 50%; margin-left: -225px!important; text-align:center;color:#fff;max-width:500px;padding:0 15px;background:rgba(44,35,18,.8); padding-top: 0!important;}
+.page-template-store-landing-page #store-landing-hero .content .buttons {margin-bottom:-15px;}
+.absolute-header header{position: fixed !important; top: 0 !important;}
+@media(min-width: 1024px){
+.admin-bar header {top: 32px !important;}
+}
+#hp-favourite{text-align:center;}
+#jig1 .jig-imageContainer { float: none !important; display: inline-block;}
+.woocommerce ul.products li.product a{display: block;}
+li .inner-content {position: relative;}
+.white-block.install { padding: 0 30px; text-align: right; display: none;}
+.white-block.install p {text-align: right;  width: 100%;}
+.white-block.install a:hover { text-decoration: underline;}
+header .brown-block ul{margin: 0 28px 0 0 !important;}
+header .brown-block a{ font-family: Playfair Display,serif; transition: all .2s ease-out 0s; font-weight: 400;  color: #fff; font-size: 14px;}
+header .white-block { padding: 5px 32px 5px !important; }
+header .white-block .main-menu { margin-right: 0 !important; }
+@media(min-width: 768px){
+	header .white-block .main-menu li{display: inline-block; padding: 0 25px;}
+	header .white-block .main-menu{display: block !important; text-align: right;}
+	.page-template-store-landing-page .block-product-steps.vc_row.vc_column-gap-35>.vc_column_container img{width: auto !important;}
+	.page-template-store-landing-page .block-product-steps.vc_row.vc_column-gap-35>.vc_column_container h4 {max-width: 225px !important; min-height: 50px; margin:25px auto 0 !important;}
+	.cxecrt-button-holder{float: left !important;}
+}
+
+@media(min-width: 1101px){
+.page-template-store-landing-page .block-product-steps.vc_row.vc_column-gap-35>.vc_column_container{padding: 20px 20px 10px !important;}
+}
+
+#searchform { display: none; background: hsla(0,0%,100%,.9); padding: 10px;text-align:center; }
+#searchform input {padding:10px; min-width:30%;}
+#searchform button { background:#fff; border: 0; padding: 10px; z-index:9999;margin-left:-40px;}
+.search-display { margin-left:10px; cursor:pointer;}
+.header-banner-wrap .header-inner, .search #page-content{padding-top:162px;}
+.header-inner header, .search header{position: fixed; width: 100%; top: 0;}
+.search header.page-header{position: relative; z-index: -9;}
+nav.navigation.pagination {text-align: center;}
+nav.navigation.pagination a, nav.navigation.pagination span {border: 1px solid #393939; padding: 5px 10px;}
+nav.navigation.pagination {text-align: center; margin-bottom:30px; margin-top:25px;}
+nav.navigation.pagination a.prev, nav.navigation.pagination a.next {display: none;}
+nav.navigation.pagination .dots{border: none;}
+.mw_store_categories h4{font-size: 25px; font-weight: bold;}
+p span.right-pro-cont{background: #5c5240; color: #fff; font-size: 35px; padding: 30px;  border-radius: 100%;  width: 115px;  display: inline-block;}
+.perfect-porch img{border-radius:7px;}
+.install{text-align: right;}
+@media (max-width: 1023px){
+	header{margin-right: 0; margin-left: 0;}
+	}
+@media(max-width: 767px){
+	.header-banner-wrap .header-inner, .search #page-content{padding-top:170px;}
+	.header-banner-wrap .header-inner .title{margin-top: 30px;}
+	.absolute-header header{margin:0;}
+	#hp-hero .size-h1 { font-size: 22px;}
+	#hp-hero .size-h4{font-size: 14px;}
+	.buttons .btn-green, .buttons .btn-white{min-width: 135px; padding-right: 5px;  padding-left: 5px;}
+	#hp-hero .content .buttons{position: relative; padding: 0 10px; display: block !important;}
+	#hp-hero .content{width: 90%;}
+	#hp-about .left{ margin: 0 auto 20px;padding: 5vw !important;}
+	#hp-about .left .inner{border: 0 !important;}
+	.view-more a.btn-green{float: none;}
+	#hp-testimonials .teaser{ margin: 0 auto 20px !important;}
+	#hp-testimonials .teaser h3{width: 90% !important; font-size: 25px !important; text-align: center;}
+	#hp-testimonials .teaser h3 .inner:before{background: transparent !important;}
+	.buttons .btn-white{margin-right: 10px;}
+}
+
+#main-menu li.menu-item-20550 a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Nanum Myeongjo,serif;
+    transition: all .2s ease-out 0s;
+    text-transform: capitalize;
+    font-weight: 700;
+    display: inline-block;
+    height: 50px;
+    line-height: 52px;
+    font-size: 13px;
+    min-width: 180px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 0;
+    cursor: pointer;
+    background: #004646!important;
+    color: #fff;
+    width: auto!important;
+    line-height: 52px!important;
+    font-size: 13px!important;
+    padding: 0 40px!important;
+    border: 0!important;
+    color: #fff!important;
+    border-radius: 0!important;
+}
+
+#mobile-menu li.menu-item-20550 {background:#004646;}
+#mobile-menu li.menu-item-20550 a {border-bottom:1px solid #897e6a;}
+#mobile-menu li.menu-item-20550 .sub-menu {background:#5c5240;}
+
+
+
+#mobile-menu {margin: 0; width: 100%; overflow-y: auto; -webkit-overflow-scrolling:touch; list-style: none;padding: 0;color: #fff;} /* height: 200px; max-height: 200px; */
+#mobile-menu li { border-bottom:1px solid #897e6a; }
+#mobile-menu li ul li, #mobile-menu li ul { border-bottom:none; }
+
+/* Hide navigation menu */
+.menu-links { background:#5C5240; display:none; }
+
+/* Style navigation menu links */
+.menu-links a { color: white; padding: 14px 16px; text-decoration: none; font-size: 17px; display: block; }
+
+/* header *********************************************************************************/
+.mylogo {margin: 20px 0;}
+.white-block .fa {font-size:28px;}
+#logo-block img {margin-top: 20px;margin-bottom: 20px;}
+#searchform {width: 100%;padding:0 0 24px 0;}
+#searchform input {padding: 10px;width: 50%;}
+#toggle-block {margin-left:18px;display:none;}
+#main-header {padding-top: 0;padding-bottom: 0;}
+#right-block, #search-block, #button-block { flex-direction: row; display: flex; align-items: center;}
+.search-display {margin-left: 18px;}
+
+@media (min-width: 1024px) {
+	/* Hide navigation menu */
+.menu-links { display:none!important; }
+}
+
+
+@media (max-width: 1023px) {
+	#toggle-block {display:inline-block;}
+	.desktop-menu-links, .hidesubnav {display:none;}
+	header .white-block .main-menu { max-width: 600px; margin-right: 0px;}
+	header .white-block { padding: 0px 20px; }
+	.header-inner {padding: 0!important;}
+
+	#searchform {padding:24px 0;}
+	.absolute-header header { position: relative!important;width: 100%!important;}
+	header { position: relative!important;width: 100%!important;margin-left:0;margin-right:0;}
+}
+
+@media (max-width: 605px) {
+	#searchform input {width: 90%;}
+	header .white-block {justify-content: center;}
+	header .white-block {flex-wrap: nowrap;}
+}

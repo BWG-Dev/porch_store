@@ -1,0 +1,162 @@
+/**
+ * Blog archive
+ */
+
+#blog-archive {
+	padding-top: 40px;
+	padding-bottom: 60px;
+
+	// post item
+	.post-block {
+		// image
+		.img-wrap {
+			float: right;
+			max-width: 300px;
+			max-height: 300px;
+			margin-left: 60px;
+			margin-bottom: 50px;
+
+			a {
+				@include transition;
+
+				&:hover {
+					opacity: .9;
+				}
+
+				img {
+					max-width: 100%;
+					max-height: 300px;
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+
+		// heading link
+		h2 {
+			a {
+				@include transition;
+
+				&:hover {
+					color: rgb(154, 124, 69);
+				}
+			}
+		}
+
+		// date and category
+		.date-category-wrap {
+			i {
+				margin-right: 5px;
+			}
+
+			.date {
+				margin-right: 30px;
+			}
+
+			a {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		// excerpt
+		.excerpt {
+			margin-bottom: 30px;
+		}
+
+		// bottom separator
+		&::after {
+			content: '';
+			display: block;
+			height: 1px;
+			background: #ddd;
+			margin: 50px auto;
+			clear: both;
+		}
+
+		// responsive
+		@include media('<768px') {
+			.img-wrap {
+				max-width: 200px;
+				max-height: 200px;
+
+				a {
+					img {
+						max-height: 200px;
+					}
+				}
+			}
+		}
+
+		@include media('<580px') {
+			.img-wrap {
+				max-width: 120px;
+				max-height: 120px;
+				margin-left: 30px;
+				margin-bottom: 30px;
+
+				a {
+					img {
+						max-height: 120px;
+					}
+				}
+			}
+		}
+
+		@include media('<450px') {
+			.img-wrap {
+				float: none;
+				margin-left: 0;
+				width: 300px;
+				max-width: 100%;
+				max-height: 200px;
+
+				a {
+					img {
+						max-height: 200px;
+					}
+				}
+			}
+		}
+	}
+
+	// pagination
+	nav.navigation.pagination {
+		text-align: center;
+
+		a {
+			@include transition;
+			padding: 5px 8px 6px;
+			background: #5c5240;
+			color: #fff;
+
+			&:hover {
+				background: rgb(154, 124, 69);
+			}
+		}
+
+		span.page-numbers.current {
+			font-weight: bold;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+}
+
+/**
+ * Single blog post
+ */
+
+#blog-single {
+	padding-top: 40px;
+	padding-bottom: 60px;
+
+	// image captions
+	.wp-caption {
+		.wp-caption-text {
+			margin-top: 0;
+			font-style: italic;
+		}
+	}
+}

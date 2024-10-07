@@ -1,0 +1,284 @@
+/**
+ * Store landing page
+ */
+.page-template-store-landing-page {
+
+	// hero block
+	#store-landing-hero {
+		min-height: 570px;
+		background: url('../images/store-landing-banner.jpg') 50% 50% no-repeat;
+		background-size: cover;
+
+		// responsive
+		@include media(('>1440px', ('>720px' 'retina2x'))) {
+			background-image: url('../images/store-landing-banner@2x.jpg');
+		}
+
+		// inner content
+		.content {
+			padding-top: 220px;
+			text-align: center;
+			color: #fff;
+			max-width: 500px;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-left: auto;
+			margin-right: auto;
+
+			h1,
+			h2 {
+				padding-left: 15px;
+				padding-right: 15px;
+				margin-bottom: 24px;
+				font-weight: 700;
+				color: #fff;
+			}
+
+			// buttons
+			.buttons {
+				text-align: center;
+
+				a {
+					box-shadow: 0 3px 19px 0 rgba(0, 0, 0, .3);
+				}
+			}
+		}
+
+		// responsive
+		@include media('<768px') {
+			.content {
+				padding-top: 250px;
+			}
+		}
+
+		@include media('<460px') {
+			min-height: 650px;
+
+			.content {
+				padding-top: 300px;
+			}
+		}
+
+		// responsive
+		@include media('<375px') {
+			min-height: 700px;
+
+			.content {
+				padding-top: 350px;
+			}
+		}
+	}
+
+	// four steps blocks
+	.block-product-steps {
+		overflow: hidden;
+		max-width: 100%;
+
+		&.vc_row.vc_column-gap-35>.vc_column_container {
+			h4 {
+				margin: -10px auto 0;
+			}
+
+			// responsive
+			@include media('>=768px') {
+				img {
+					width: 180px;
+				}
+
+				h4 {
+					max-width: 180px;
+				}
+			}
+
+			@include media('>1100px') {
+				padding: 20px 40px 10px;
+			}
+		}
+
+		// responsive
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	// dark testimonials
+	.dark-testimonials {
+		color: #fff;
+		font-size: 19px;
+
+		// quotes
+		.wpb_single_image {
+			margin-bottom: 0;
+		}
+
+		// content
+		h2 {
+			color: #fff;
+		}
+
+		.author {
+			font-size: 15px;
+			text-transform: uppercase;
+			color: #D4D4D4;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 40px;
+				height: 2px;
+				background: #f5a623;
+				margin-bottom: 18px;
+			}
+
+			strong {
+				font-weight: bold;
+				color: #fff;
+			}
+		}
+
+		// responsive
+		@include media('<768px') {
+			.wpb_row .wpb_wrapper {
+				padding-left: 10px;
+				padding-right: 10px;
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		@include media('<375px') {
+			.wpb_row .wpb_wrapper {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+		}
+	}
+
+	// store category list
+	.mw_store_categories {
+		// image
+		.wpb_single_image {
+			margin-bottom: 25px;
+
+			a {
+				@include transition;
+
+				&:hover {
+					opacity: .85;
+				}
+			}
+		}
+
+		// text block
+		.wpb_text_column {
+			padding: 0 4px;
+
+			&:last-child {
+				margin-bottom: 60px;
+			}
+
+			h4 {
+				margin: 0;
+
+				a {
+					@include transition;
+					&:hover {
+						color: lighten(#004646, 5%) !important;
+					}
+				}
+			}
+
+			// last link
+			p:last-child {
+				margin-top: 20px;
+
+				a {
+					@include transition;
+					font-weight: bold;
+					color: #004646;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+
+					&::after {
+						margin-left: 5px;
+						content: '\2192';
+					}
+
+					&:hover {
+						color: lighten(#004646, 5%) !important;
+					}
+				}
+			}
+		}
+
+		// responsive
+		@include media('<768px') {
+			.vc_col-sm-4 {
+				max-width: 500px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	// bottom links
+	.bottom-links {
+		position: relative;
+		top: -16px;
+
+		.wpb_text_column {
+			margin-bottom: 0;
+
+			& > .wpb_wrapper {
+				display: flex;
+				justify-content: center;
+
+				p {
+					@include ff-p;
+					font-weight: 400;
+					padding-left: 50px;
+					padding-right: 50px;
+					font-size: 14px;
+					color: #004646;
+
+
+					a {
+						@include transition;
+						color: #004646;
+
+						&:hover {
+							color: lighten(#004646, 5%) !important;
+						}
+					}
+				}
+			}
+		}
+
+		// responsive
+		@include media('<768px') {
+			.wpb_text_column {
+
+				& > .wpb_wrapper {
+					flex-direction: column;
+
+					p {
+						text-align: center;
+						margin: 5px 0;
+					}
+				}
+			}
+		}
+	}
+
+	// fix pinterest button
+	span[data-pin-log="button_pinit_bookmarklet"] {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		// responsive
+		@include media('<768px') {
+			display: none;
+		}
+	}
+}

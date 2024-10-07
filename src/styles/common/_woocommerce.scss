@@ -1,0 +1,63 @@
+/**
+ * WooCommerce adjustments
+ */
+
+// general product listing
+.woocommerce > ul.products > li.product {
+
+}
+
+// responsive category listing
+.has-sidebar .woocommerce .products.columns-4 li {
+	@include media('<1170px') {
+		width: 28%;
+		float: none !important;
+		display: inline-block;
+		vertical-align: top;
+
+		&.first {
+			clear: none;
+		}
+		&.last {
+			margin-right: 3.8%;
+		}
+	}
+
+	@include media('<1024px') {
+		width: 46% !important;
+		margin-right: 3% !important;
+	}
+
+	@include media('<520px') {
+		width: 100% !important;
+		margin-right: 0 !important;
+	}
+}
+
+// product being listed
+.woocommerce .product {
+	// fix stars rating
+	.yotpo.bottomLine {
+		display: block;
+	}
+}
+
+// single product
+.woocommerce .single-product > .product {
+	padding-top: 25px;
+
+	// gallery
+	.woocommerce-product-gallery {
+		// bottom thumbs
+		.flex-control-nav {
+			max-width: 424px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+
+			li {
+				padding: 3px;
+			}
+		}
+	}
+}

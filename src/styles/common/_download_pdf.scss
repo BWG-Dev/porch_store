@@ -1,0 +1,95 @@
+#download-pdf {
+	background: linear-gradient(to bottom, #ffffff 0%, #d8d8d8 100%);
+	padding-top: 100px;
+	padding-bottom: 50px;
+
+	.cols {
+		max-width: 1400px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.left {
+			flex: 1 1 50%;
+		}
+
+		.right {
+			flex: 1 1 50%;
+
+			#mailchimp-form {
+				width: 430px;
+				max-width: 100%;
+
+				h3 {
+
+				}
+
+				.disclaimer {
+					margin-bottom: 35px;
+				}
+
+				.row {
+					margin-bottom: 30px;
+
+					input[type="text"],
+					input[type="email"] {
+						font-size: 13px;
+						padding: 18px 16px;
+						box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .15);
+						background: #fff;
+						border: 0;
+						width: 410px;
+						max-width: 100%;
+					}
+
+					button[type="submit"] {
+						cursor: pointer;
+					}
+				}
+
+				// messages
+				.message {
+					&.error {
+						color: #dd0000;
+
+						p {
+							margin: 0;
+							padding: 0 0 1em;
+						}
+					}
+
+					&.success {
+						font-size: 1.25em;
+						margin: 0;
+
+						a {
+							@include transition;
+							color: #5C5240;
+
+							&:hover {
+								color: #9a7c45;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// responsive
+	@include media('<768px') {
+		padding-top: 60px;
+
+		.cols {
+			flex-direction: column;
+
+			.right {
+				max-width: 100%;
+			}
+		}
+	}
+}

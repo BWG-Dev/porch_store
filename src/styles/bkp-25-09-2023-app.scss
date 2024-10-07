@@ -1,0 +1,31 @@
+// variables, mixins
+@import 'variables';
+@import 'mixins';
+
+// node modules and vendor libraries
+@import 'vendor/include_media_or';
+@import 'normalize-scss/sass/normalize/import-now';
+
+// legacy styling
+@import 'common/legacy';
+
+// page parts
+@import 'common/general';
+@import 'common/header';
+@import 'common/footer';
+@import 'common/wp_bakery';
+@import 'common/woocommerce';
+@import 'common/download_pdf';
+@import 'common/sidebar';
+@import 'common/gravity_forms';
+
+// front-page
+@import 'frontpage/hero';
+@import 'frontpage/about';
+@import 'frontpage/favourite';
+@import 'frontpage/testimonials';
+
+// various content pages
+@import 'pages/page';
+@import 'pages/store_landing';
+@import 'pages/blog';

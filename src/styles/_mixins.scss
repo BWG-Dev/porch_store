@@ -1,0 +1,79 @@
+// antialiased text
+@mixin antialiased() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// recount pixels to em
+@function em($pixels, $context: 15) {
+  @return #{$pixels/$context}em;
+}
+
+// transition
+@mixin transition ($property: all, $time: 0.2s, $easing: ease-out) {
+	transition: $property $time $easing 0s;
+}
+
+// font families
+@mixin ff-n() {
+	@include antialiased;
+	font-family: 'Nanum Myeongjo', serif;
+
+}
+@mixin ff-l() {
+	@include antialiased;
+	font-family: 'Lato', sans-serif;
+}
+@mixin ff-p() {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+}
+
+// ----- buttons -----
+@mixin btn() {
+	@include ff-n;
+	@include transition;
+	text-transform: capitalize;
+	font-weight: 700;
+	display: inline-block;
+	height: 50px;
+	line-height: 52px;
+	font-size: 13px;
+	min-width: 180px;
+	text-align: center;
+	white-space: nowrap;
+	text-decoration: none;
+	padding-left: 40px;
+	padding-right: 40px;
+	border: 0;
+	cursor: pointer;
+
+	@include media('<768px') {
+		padding-left: 20px;
+		padding-right: 20px;
+		min-width: 140px;
+		line-height: 38px;
+		height: 36px;
+	}
+}
+
+@mixin btn-green {
+	@include btn;
+	background: #004646 !important;
+	color: #fff;
+
+	&:hover {
+		background: lighten(#004646, 5%) !important;
+	}
+}
+
+@mixin btn-white {
+	@include btn;
+	background: #fff;
+	color: #004646;
+
+	&:hover {
+		background: #f2f2f2;
+		color: lighten(#004646, 5%);
+	}
+}

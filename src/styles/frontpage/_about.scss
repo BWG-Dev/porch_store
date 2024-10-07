@@ -1,0 +1,123 @@
+#hp-about {
+	padding-top: 60px;
+	padding-bottom: 230px;
+	background: url('../images/home-about-bg.jpg') 50% 50% no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	// responsive
+	@include media(('>1440px', ('>720px' 'retina2x'))) {
+		background-image: url('../images/home-about-bg@2x.jpg');
+	}
+
+	// left block
+	.left {
+		@include ff-n;
+		font-size: 32px;
+		line-height: 1.2;
+		width: 48%;
+		background: #5C5240;
+		color: #fff;
+		padding: 75px 150px 75px 20px;
+
+		.inner {
+			border-left: 2px solid #4A4231;
+			padding-left: 20px;
+			float: right;
+
+			p {
+				margin: 0;
+				max-width: 440px;
+			}
+		}
+	}
+
+	// right block
+	.right-features {
+		width: 48%;
+
+		.item {
+			@include ff-l;
+			max-width: 500px;
+			padding-left: 145px;
+			min-height: 120px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background: {
+				position: left center;
+				repeat: no-repeat;
+				size: 120px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 25px;
+			}
+
+			&.ico-design {
+				background-image: url('../images/ico-design.svg');
+			}
+
+			&.ico-products {
+				background-image: url('../images/ico-products.svg');
+			}
+
+			h3 {
+				margin-top: 0;
+				margin-bottom: .5em;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		// if item is link, underline header on hover
+		a.item:hover h3 {
+			text-decoration: underline;
+		}
+	}
+
+	// responsive
+	@include media('<1400px') {
+		.left {
+			padding-right: 5vw;
+		}
+
+		.right-features {
+			min-width: 460px;
+			padding-right: 20px;
+			margin-left: 30px;
+		}
+	}
+
+	@include media('<768px') {
+		flex-direction: column;
+		align-items: flex-start;
+
+		.left {
+			width: 85%;
+			padding-right: 10vw;
+			margin-bottom: 20px;
+		}
+
+		.right-features {
+			width: auto;
+			min-width: 0;
+			margin-left: 15px;
+		}
+	}
+
+	@include media('<375px') {
+		.right-features {
+			.item {
+				padding-left: 0;
+				padding-top: 140px;
+				background-position: center top;
+				text-align: center;
+			}
+		}
+	}
+}

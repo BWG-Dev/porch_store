@@ -1,0 +1,40 @@
+/* Configuration */
+.acf-field-list .acf-field-object-divider{
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px 5px 0 0;
+  margin-top: 10px;
+}
+.acf-field-list .acf-field-object-divider .handle ul li.li-field-name{
+	visibility: hidden;
+}
+.acf-field-list .acf-field-object-divider tr[data-name="name"],
+.acf-field-list .acf-field-object-divider tr[data-name="instructions"],
+.acf-field-list .acf-field-object-divider tr[data-name="required"],
+.acf-field-list .acf-field-object-divider tr[data-name="wrapper"],
+.acf-field-list .acf-field-object-divider tr[data-name="conditional_logic"],
+.acf-field-list .acf-field-object-divider tr[data-name="warning"] {
+	display: none !important;
+}
+
+/* Usage */
+.acf-fields .acf-field-divider {
+	padding: 5px;
+	border-top: none;
+  background: #0085ba;
+}
+
+.acf-field-divider .acf-label {
+	display: none;
+}
+
+.acf-field-divider h2.acf-divider-heading {
+  margin: 5px auto !important;
+  font-size: 1.1em !important;
+  padding: 0 !important;
+  width: 98%;
+  font-weight: bold;
+  color: #fff;
+}
+.acf-divider-heading span {
+  margin-left: 10px;
+}

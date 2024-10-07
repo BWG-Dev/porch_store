@@ -1,0 +1,22 @@
+/**
+ * WP Bakery elements override
+ */
+
+// green button
+a.vc_btn3-color-green {
+	@include btn-green();
+	border-radius: 0 !important;
+	border: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	line-height: 52px !important;
+
+	@include media('<768px') {
+		line-height: 36px !important;
+	}
+}
+
+// separator line
+div.vc_separator.vc_sep_color_grey .vc_sep_line {
+	border-color: #979797;
+}

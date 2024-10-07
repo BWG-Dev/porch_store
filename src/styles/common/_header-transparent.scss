@@ -1,0 +1,119 @@
+$color_1: #5c5240;
+$color_2: #fff;
+$color_3: #000000;
+$color_4: #393939;
+$color_5: #004646;
+$font-family_1: Lato, sans-serif;
+$font-family_2: Nanum Myeongjo, serif;
+$font-family_3: Lato;
+
+.transparent-header {
+	position: absolute;
+	width: 100%;
+	z-index: 111;
+
+	header {
+		background: unset;
+		box-shadow: unset;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+
+		.white-block {
+			background: transparent;
+			transition-duration: 0.3s;
+
+			#logo-block img {
+				transition-duration: 0.4s;
+			}
+
+			#search-block {
+				display: none;
+				@include media((">=320px" "<1024px")) {
+					display: flex;
+					i {
+						color: $color_2 !important;
+					}
+				}
+			}
+
+			.main-menu {
+				margin: 0;
+				li {
+					padding: 0 15px;
+					a {
+						background: linear-gradient(
+								to right,
+								rgba(0, 0, 0, 0),
+								rgba(0, 0, 0, 0)
+							),
+							linear-gradient(
+								to right,
+								rgb(255, 255, 255),
+								rgb(255, 255, 255)
+							);
+						background-size: 100% 1px, 0 1px;
+						background-position: 100% 100%, 0 100%;
+						background-repeat: no-repeat;
+						transition: background-size 400ms;
+						color: $color_2;
+						font-size: 14px;
+						font-weight: bold;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: normal;
+						letter-spacing: normal;
+						&:hover {
+							background-size: 0 1px, 100% 1px;
+							color: $color_2;
+						}
+					}
+				}
+			}
+
+			@include media((">=320px" "<600px")) {
+				padding: 5px 10px 5px !important;
+            }
+            @include media(("<1024px")) {
+				justify-content: space-between;
+				.cart-link {
+					color: $color_2 !important;
+					background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzBweCIgaGVpZ2h0PSIyN3B4IiB2aWV3Qm94PSIwIDAgMzAgMjciIHZlcnNpb249IjEuMSI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjQgKDY3Mzc4KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY28tY2FydDwvdGl0bGU+CiAgICA8ZGVzYyBmaWxsPSIjZmZmZmZmIj5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJzaG9wcGluZy1jYXJ0LXNvbGlkIiBmaWxsPSIjZmZmZmZmIj4KICAgICAgICAgICAgPHBhdGggZD0iTTI3LjUwNjI1LDE1Ljg4OTg2OTEgQzI3LjM3NjkyNzEsMTYuNDY2MDk3NyAyNi44NzA5ODk2LDE2Ljg3NSAyNi4yODczNDM4LDE2Ljg3NSBMMTEuMDE5Mzc1LDE2Ljg3NSBMMTEuMzYwMjYwNCwxOC41NjI1IEwyNS4zNDAzNjQ2LDE4LjU2MjUgQzI2LjE0MjUsMTguNTYyNSAyNi43MzcwMzEzLDE5LjMxNjY1NDMgMjYuNTU5MjcwOCwyMC4xMDg2MTkxIEwyNi4yNzE5MjcxLDIxLjM4ODc5ODggQzI3LjI0NTQxNjcsMjEuODY3MjU3OCAyNy45MTY2NjY3LDIyLjg3NzY0ODQgMjcuOTE2NjY2NywyNC4wNDY4NzUgQzI3LjkxNjY2NjcsMjUuNjc3ODQzOCAyNi42MTA4MzMzLDI3IDI1LDI3IEMyMy4zODkxNjY3LDI3IDIyLjA4MzMzMzMsMjUuNjc3ODQzOCAyMi4wODMzMzMzLDI0LjA0Njg3NSBDMjIuMDgzMzMzMywyMy4yMjAzMTY0IDIyLjQxOTExNDYsMjIuNDczNTQ0OSAyMi45NTk1MzEyLDIxLjkzNzUgTDEyLjA0MDQxNjcsMjEuOTM3NSBDMTIuNTgwODg1NCwyMi40NzM1NDQ5IDEyLjkxNjY2NjcsMjMuMjIwMzE2NCAxMi45MTY2NjY3LDI0LjA0Njg3NSBDMTIuOTE2NjY2NywyNS42Nzc4NDM4IDExLjYxMDgzMzMsMjcgMTAsMjcgQzguMzg5MTY2NjcsMjcgNy4wODMzMzMzMywyNS42Nzc4NDM4IDcuMDgzMzMzMzMsMjQuMDQ2ODc1IEM3LjA4MzMzMzMzLDIyLjk1MTE2MDIgNy42NzMxNzcwOCwyMS45OTU1MDc4IDguNTQ4NDg5NTgsMjEuNDg1ODMwMSBMNC44ODk3Mzk1OCwzLjM3NSBMMS4yNSwzLjM3NSBDMC41NTk2MzU0MTcsMy4zNzUgMCwyLjgwODM2OTE0IDAsMi4xMDkzNzUgTDAsMS4yNjU2MjUgQzAsMC41NjY2MzA4NTkgMC41NTk2MzU0MTcsMCAxLjI1LDAgTDYuNTkwMDUyMDgsMCBDNy4xODM4NTQxNywwIDcuNjk1NzI5MTcsMC40MjI5ODI0MjIgNy44MTQ2ODc1LDEuMDExOTcyNjYgTDguMjkyMDgzMzMsMy4zNzUgTDI4Ljc0OTQ3OTIsMy4zNzUgQzI5LjU1MTYxNDYsMy4zNzUgMzAuMTQ2MTQ1OCw0LjEyOTE1NDMgMjkuOTY4Mzg1NCw0LjkyMTExOTE0IEwyNy41MDYyNSwxNS44ODk4NjkxIFogTTguODE2MTczNTgsNi4wNzcwMDc1NCBMMTAuNTEwNTc2NCwxNC40MjM2NDE3IEwyNS41NDYxMTY3LDE0LjQyMzY0MTcgTDI3LjM5MzgxNzgsNi4wNzcwMDc1NCBMOC44MTYxNzM1OCw2LjA3NzAwNzU0IFoiIGlkPSJpY28tY2FydCIgZmlsbD0iI2ZmZmZmZiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+)
+						0 0 no-repeat transparent !important;
+				}
+			}
+		}
+
+		&.sticky-header {
+			.white-block {
+				background: rgba(0, 0, 0, 0.5);
+				backdrop-filter: blur(4px);
+				border-bottom: 1px solid rgba(11, 11, 11, 0.18);
+				box-shadow: 0px 8px 15px -3px rgba(23, 23, 23, 0.25);
+				#logo-block img {
+					width: 120px;
+					margin-top: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+.hero-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__content {
+        padding: 200px 35px 80px;
+        h1 {
+            font-size: 68px;
+            color: #ffffff;
+            line-height: 69px;
+            max-width: 1390px;
+            margin-inline: auto;
+        }
+    }
+}

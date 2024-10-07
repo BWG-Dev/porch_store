@@ -1,0 +1,79 @@
+* { box-sizing: border-box; }
+
+body {
+	@include ff-l;
+	color: $text-dark;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// headers
+h1, h2, h3, h4  {
+	@include ff-n;
+	@include antialiased;
+	font-weight: 400;
+	line-height: 1.15;
+}
+
+h1 { font-size: 38px; }
+h2 { font-size: 32px; color: #5C5240; }
+h3 { font-size: 28px; color: #004646; }
+h4 { font-size: 22px; color: #004646; }
+
+.size-h1 { font-size: 38px; }
+.size-h2 { font-size: 32px; }
+.size-h3 { font-size: 28px; }
+.size-h4 { font-size: 22px; }
+
+@include media('<768px') {
+	h1 { font-size: 32px; }
+	h2 { font-size: 28px; }
+	h3 { font-size: 23px; }
+	h4 { font-size: 19px; }
+
+	.size-h1 { font-size: 32px; }
+	.size-h2 { font-size: 28px; }
+	.size-h3 { font-size: 23px; }
+	.size-h4 { font-size: 19px; }
+}
+
+// links
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+// buttons
+.btn-green {
+	@include btn-green;
+}
+.btn-white {
+	@include btn-white;
+}
+
+// containers
+.container {
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.narrow {
+		max-width: 1120px;
+	}
+}
+
+// WP classes
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 2em}
+a img.alignleft {float:left; margin:0 2em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px; }
+.wp-caption.aligncenter { margin-bottom: 30px; margin-top: 30px; }
